@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,6 +8,9 @@ body {
 }
 
 header {
+    background-image: url("../img/UNIVERZ.png");
+    background-size: 100% auto;
+    background-repeat: repeat-x;
     text-align: center;
     padding: 20px;
     background-color: #3b0065;
@@ -15,6 +19,16 @@ header {
 h1 {
     font-size: 2.5em;
     margin: 0;
+    font-family:"Oswald", sans-serif;
+}
+
+h2 {
+    font-family:"Oswald", sans-serif;
+    font-size: 30;
+}
+
+p {
+    font-family: "Lato", sans-serif;
 }
 
 section {
@@ -23,51 +37,128 @@ section {
     text-align: center;
 }
 
-.promo {
+.container-promo {
     background-image: url("../img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    /*background-color: #5e00a6;*/
+    background-size: cover;
+    background-color: #5e00a6;
     border-radius: 10px;
     padding: 30px;
+    background-size: cover; /* A imagem cobre toda a div, podendo cortar */
     margin-bottom: 20px;
 }
+
 
 .produtos-h {
     display: flex;
     justify-content: center;
     gap: 20px;
     cursor: pointer;
+    flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual desçam para a próxima linha */
 }
 
-.produto img{
-    max-width: 550px;
+.produto {
+    display: flex;
+    flex-direction: column; /* Organiza imagem e texto verticalmente */
+    align-items: center; /* Alinha a imagem e o texto ao centro */
+    text-align: center; /* Garante que o texto fique centralizado abaixo da imagem */
+    width: 300px; /* Ajuste a largura dos produtos */
+}
+
+.produto img {
+    max-width: 100%; /* Garante que a imagem ocupe toda a largura do produto */
+    height: auto;
     border-radius: 10px;
-    transition: 1.5;
+    transition: transform 0.9s ease;
 }
 
-.produto :hover {
-    transform: scale(1.1);
-    }
+.produto:hover img {
+    transform: scale(1.1); /* Efeito de zoom na imagem */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
 
-.jogo :hover {
+.produto p {
+    margin-top: 10px;
+    transition: transform 0.9s ease, margin-top 0.9s ease; /* Transições suaves para movimento e espaço */
+    font-size: 1rem;
+}
+
+.produto:hover p {
+    transform: translateY(10px); /* Move o texto para baixo */
+}
+
+.produto button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #DC2BD6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.9s ease;
+}
+
+.produto button:hover {
+    background-color: #8c00af;
     transform: scale(1.1);
+}
+
+.jogo img {
+    scale: 0.90 ;
+    transition: transform 0.9s ease; /* Ajuste no tempo para uma transição mais suave */
+}
+
+.jogo img:hover {
+    transform: scale(1.1); /* Efeito de zoom na imagem */
     cursor: pointer;
 }
 
-.contato form {
+.jogo p {
+    margin-top: 10px;
+    transition: transform 0.3s ease; /* Transição mais suave */
+    font-size: 1rem;
+}
+
+.jogo button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #DC2BD6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.9s ease; /* Ajuste de transição para o botão */
+}
+
+.jogo button:hover {
+    background-color: #8c00af;
+    transform: scale(1.1);
+}
+
+
+.form-a {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-a form {
+    box-sizing: border-box; 
     background-color: #d9d9d980 ;
     border-radius: 25px;
-    display: flex;
     flex-direction: column;
     gap: 10px;
     width: 500px;
     height: 400px;
     padding: 80px;
+    justify-content: center;
+    display: flex;
+    
 }
 
-.contato form input {
+.form-a form input {
     width: 100%;
     padding: 0px;
     font-size: 16px;
@@ -78,8 +169,12 @@ section {
     transition: border-color 0.3s;
 }
 
-.contato form a {
-    color: #D7D7D7;
+.form-a form {
+text-align: center;
+}
+
+.form-a form a {
+color: #d7d7d7d7;
 }
 
 button {
@@ -90,6 +185,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
 }
 
 button:hover {
@@ -103,3 +199,47 @@ footer {
     margin-top: 20px;
     height: 300px;  
 }
+
+.card-container {
+    display: grid; /* Define o layout como grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+    gap: 20px; /* Espaço entre os itens do grid */
+    padding: 20px; /* Espaçamento interno no container */
+    justify-items: center; /* Centraliza os cards horizontalmente nas colunas */
+    }
+    .card {
+    background-color: #894AC5; /* Cor de fundo branca para o card */
+    width: 250px; /* Largura do card */
+    height: 300px; /* Altura do card */
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    overflow: hidden; /* Garante que conteúdo extra fora do card seja escondido */
+    transition: transform 0.9s ease; /* Animação suave ao passar o mouse */
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+    padding: 100px; /* Espaçamento interno do card */
+    }
+    .card:hover {
+    transform: translateY(-10px); /* Move o card para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+    }
+    .card h3 {
+        color: #FFFF;
+    font-size: 30px; /* Tamanho da fonte do título */
+    }
+    .card p {
+    font-size: 20px; /* Tamanho da fonte do parágrafo */
+    color: #FFFF; /* Cor do texto (cinza claro) */
+    line-height: 2; /* Espaçamento entre linhas do texto */
+    font-family: "Lato", sans-serif;
+    }
+    .card img {
+    width: 100px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+    .card-content {
+    justify-items: center; /* Centraliza os itens horizontalmente dentro do grid */
+    align-items: center; /* Centraliza os itens verticalmente dentro do grid */
+    }

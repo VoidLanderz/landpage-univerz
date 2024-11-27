@@ -8,19 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Univerz Portal</h1>
+        <h1>UNIVERZ PORTAL</h1>
     </header>
     <main>
-        <section class="promo">
-            <img src="img/jogo-banner.png" alt="Void Promo"> 
-            <img src="" alt="">
-            <h2>Lançamento de Jogo: Dimenional fighterz</h2>
-            <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
-            <button type="submit">Ver mais</button>
+        <section id="promo">
+            <div class="container-promo">
+                <img src="img/jogo-banner.png" alt="Void Promo"> 
+                <img src="" alt="">
+                <h2 id="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
+                <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
+                <button type="submit">Ver mais</button>
+            </div>
         </section>
         
-        <section class="Produtos">
-            <h2>Histórias</h2>
+        <section id="produtos">
+            <h2>HISTÓRIAS</h2>
             <div class="produtos-h">
                 <div class="produto">
                     <img src="img/capitulo-2.jpg" alt="Capítulo 2">
@@ -41,45 +43,52 @@
         </section>
         
         <section class="jogos">
-            <h2>Jogos</h2>
-            <div class="jogo">
-                <img src="img/jogo-capa.png" alt="Void Battlez">
-                <p>Dimensional fighterz (detalhes em breve)</p>
-                <button type="submit">Ver mais</button>
+            <div>
+                <h2>JOGOS</h2>
+                <div class="jogo">
+                    <img src="img/UNIVERZ.png" alt="Void Battlez">
+                    <p>Dimensional fighterz (detalhes em breve)</p>
+                    <button type="submit">Ver mais</button>
+                </div>
             </div>
         </section>
         
         <section class="contato">
-            <form>
-
-                <h2>Fique Atualizado!</h2>
-
-                <input type="text" id="nome" name="nome" placeholder="Nome de usuário:" required>
-
-                <input type="email" id="email" name="email" placeholder="E-mail" required>
-
-                <input type="senha" id="senha" name="senha" placeholder="Senha" required>
-                
-                <button type="submit">enviar</button>
-
-                <a href="img/capitulo-1.jpg">Faça login via google</a>
-            </form>
+            <div class="form-a">
+                <form>
+                    <h2>Fique Atualizado!</h2>
+                    <input type="text" id="nome" name="nome" placeholder="Nome de usuário:" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <input type="senha" id="senha" name="senha" placeholder="Senha" required>
+                    <button type="submit">enviar</button>
+                    <a href="img/capitulo-1.jpg">Faça login via google</a>
+                </form>
+            </div>
         </section>
-        
-        <section class="Depoimentos">
+    <section id="Depoimentos">
+        <div>
             <h2>Depoimentos</h2>
-            <div class="Depoimento">
-                <p>Gabriel: "Caçarolas que site mais maneiro :D"</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/pessoa1.jpg" alt="Contexto imagem 1" width="100">
+                    <h3>@bielgamer:</h3>
+                    <p>"Caçarolas que site mais maneiro :D"</p>
+                    </div>
+                    <div class="card">
+                    <img src="img/pessoa2.jpg" alt="Contexto imagem 2" width="100">
+                    <h3>@OffDri:</h3>
+                    <p>"Gostei do site, a estética minimalista é muito boa e imersiva."</p>
+                    </div>
+                    <div class="card">
+                    <img src="img/pessoa3.jpg" alt="Contexto imagem 3" width="100">
+                    <h3>@Kaua:</h3>
+                    <p>"Mal posso esperar para jogar a beta desse Dimenional fighterz."</p>
+                </div>
             </div>
-            <div class="Depoimento">
-                <p>Adriel: "Gostei do site, a estética minimalista é muito boa e imersiva."</p>
-            </div>
-            <div class="Depoimento">
-                <p>Kaua: "Mal posso esperar para jogar a beta desse Dimenional fighterz."</p>
-            </div>
-        </section>
+        </div>
+    </section>
     </main>
-    
+
     <footer>
         <div class="row">
             <div class="col-md-3">
