@@ -3,26 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Emanuel Durães">
     <title>Univerz Portal</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>UNIVERZ PORTAL</h1>
-        <a href="#jogos">Jogos</a>
-        <a href="#produtos">historias</a>
-        <a href="#contato">contato</a>
-        <a href="#depoimentos">depoimento</a>
-    </header>
+    <section id="home">
+        <header>
+            <h1 id="ltr"><a href="#home">UNIVERZ PORTAL</a></h1>
+            <nav>
+                <a href="#produtos">historias</a>
+                <a href="#jogos">Jogos</a>
+                <a href="#contato">contato</a>
+                <a href="#depoimentos">Depoimentos</a>
+            </nav>
+        </header>
+    </section>
     <main>
         <section id="promo">
-            <div class="container-promo">
-                <img src="img/jogo-banner.png" alt="Void Promo"> 
-                <h2 id="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
-                <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
-                <button type="submit">Ver mais</button>
+            <div class="carrosel">
+                <div class="carrosel-itm">
+                    <div class="fundo-bacana">
+                        <div id="txt-1">
+                            <h2 id="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
+                            <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
+                            <button type="submit">Ver mais</button>
+                        </div>
+                        <div id="img-1">
+                            <img src="img/jogo-banner.png" alt="Void Promo">
+                        </div>
+                    </div>
+                </div>
+                <div class="carrosel-itm">
+                    <div class="fundo-bacana">
+                        <div id="txt-2">
+                            <h2 id="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
+                            <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
+                            <button type="submit">Ver mais</button>
+                        </div>
+                        <div id="img-2">
+                            <img src="img/jogo-capa.png" alt="Jogo Promo">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        
         
         <section id="produtos">
             <h2>HISTÓRIAS</h2>
@@ -46,11 +73,12 @@
         </section>
         
         <section id="jogos">
-            <div>
+            <div class="gradiente">
                 <h2>JOGOS</h2>
                 <div class="jogo">
                     <img src="img/UNIVERZ.png" alt="Void Battlez">
-                    <p>Dimensional fighterz (detalhes em breve)</p>
+                    <h1>Dimensional fighterz</h1>
+                    <p>(detalhes em breve)</p>
                     <button type="submit">Ver mais</button>
                 </div>
             </div>
@@ -64,7 +92,6 @@
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
                     <input type="telefone" id="telefone" name="telefone" placeholder="telefone" required>
                     <button type="submit">enviar</button>
-                    <a href="img/capitulo-1.jpg">Faça login via google</a>
                 </form>
             </div>
         </section>
@@ -76,13 +103,13 @@
                     <img src="img/pessoa1.jpg" alt="Contexto imagem 1" width="100">
                     <h3>@bielgamer:</h3>
                     <p>"Caçarolas que site mais maneiro :D"</p>
-                    </div>
-                    <div class="card">
+                </div>
+                <div class="card">
                     <img src="img/pessoa2.jpg" alt="Contexto imagem 2" width="100">
                     <h3>@OffDri:</h3>
                     <p>"Gostei do site, a estética minimalista é muito boa e imersiva."</p>
-                    </div>
-                    <div class="card">
+                </div>
+                <div class="card">
                     <img src="img/pessoa3.jpg" alt="Contexto imagem 3" width="100">
                     <h3>@Kaua:</h3>
                     <p>"Mal posso esperar para jogar a beta desse Dimenional fighterz."</p>
@@ -93,22 +120,22 @@
     </main>
 
     <footer>
-        <div class="row">
-            <div class="col-md-3">
-                <img src="img/Instagram.png" >
-                <img src="img/Facebook.png" >
-                <img src="img/LinkedIn.png" >
+        <div class="footer-content">
+            <div class="social">
+                <img src="img/Instagram.png" alt="Instagram">
+                <img src="img/Facebook.png" alt="Facebook">
+                <img src="img/LinkedIn.png" alt="LinkedIn">
             </div>
-            <div class="col-md-7">
-                <p class="text-center mt-4">
-                    © Todos os direitos reservados Univerz
-                </p>
+            <div class="footer-text">
+                <p>© Todos os direitos reservados Univerz</p>
             </div>
-            <div class="col-md-2 mt-4 ml-5">
+            <div class="logo-footer">
                 <img src="img/Logo.jpg" alt="Univerz Logo" width="100">
             </div>
         </div>
-        <p></p>
-    </footer>
+    </footer>    
+
+    <script src="/js/script.js"></script>
+
 </body>
 </html
