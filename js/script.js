@@ -22,4 +22,4 @@ function changeSlide() {
     carrosel.style.transform = `translateX(${offset}%)`; // Aplicar a transição do movimento
 }
 
-setInterval(changeSlide, 3000); // Troca de slide a cada 3 segundos
+setInterval(changeSlide, 10000); // Troca de slide a cada 3 segundos

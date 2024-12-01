@@ -217,12 +217,12 @@ h2 {
     padding-right: 20px; 
 }
 
-#img-1, #img2 img {
+#img-1, #img-2 {
     max-width: 100%; 
     height: auto;  
     border-radius: 10px;
     position: relative;
-    padding-right: 50px;
+    padding-right: 250px;
     padding-bottom: 2px;
     margin-top: -50px;
 }
@@ -240,7 +240,7 @@ h2 {
 }
 
 .carrosel.mover {
-    transform: translateX(-100%); 
+    transform: translateX(-900%); 
 }
 
 
