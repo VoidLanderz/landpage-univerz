@@ -1,25 +1,76 @@
-const header = document.querySelector('header');
+const nav = document.querySelector('nav');
 
-// treco pra deixar o header maneiro 
+// treco pra deixar o nav maneiro 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) { 
         // Adiciona a classe 'small' se o scroll for maior que 50px
-        header.classList.add('small');
+        nav.classList.add('small');
     } else {
         // Remove a classe 'small' quando o scroll voltar ao topo
-        header.classList.remove('small');
+        nav.classList.remove('small');
     }
 });
 
-let currentIndex = 0;
-const items = document.querySelectorAll('.carrosel-itm');
-const totalItems = items.length;
-const carrosel = document.querySelector('.carrosel');
 
-function changeSlide() {
-    currentIndex = (currentIndex + 1) % totalItems; // Avançar para o próximo slide
-    const offset = -currentIndex * 100; // Calcular o deslocamento para o próximo slide
-    carrosel.style.transform = `translateX(${offset}%)`; // Aplicar a transição do movimento
-}
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carrosel-itm');
+    const totalItems = items.length;
+    const carrosel = document.querySelector('.carrosel');
+    const bolinhasContainer = document.querySelector('.bolinhas');
 
-setInterval(changeSlide, 10000); // Troca de slide a cada 3 segundos
+    // Criar as bolinhas de acordo com a quantidade de slides
+    function createBolinhas() {
+        for (let i = 0; i < totalItems; i++) {
+            const bolinha = document.createElement('div');
+            bolinha.classList.add('bolinha');
+            // Adicionar um evento de clique a cada bolinha
+            bolinha.addEventListener('click', () => {
+                currentIndex = i;  // Atualiza o índice para o slide clicado
+                updateSlide();      // Atualiza o carrossel e os indicadores
+            });
+            bolinhasContainer.appendChild(bolinha);
+        }
+        updateBolinhas(); // Atualiza os indicadores iniciais
+    }
+
+    // Função para atualizar o estado das bolinhas
+    function updateBolinhas() {
+        const bolinhas = document.querySelectorAll('.bolinha');
+        bolinhas.forEach((bolinha, index) => {
+            bolinha.classList.remove('active'); // Remove a classe 'active' de todos
+            if (index === currentIndex) {
+                bolinha.classList.add('active'); // Adiciona a classe 'active' no indicador atual
+            }
+        });
+    }
+
+    // Função para atualizar o slide e os indicadores
+    function updateSlide() {
+        const offset = -currentIndex * 100; // Calcular o deslocamento (cada slide tem 100% de largura)
+        carrosel.style.transform = `translateX(${offset}%)`; // Atualizar o carrossel
+        updateBolinhas(); // Atualiza os indicadores
+    }
+
+    // Função para avançar para o próximo slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems; // Avançar para o próximo slide
+        updateSlide();  // Atualiza o carrossel e os indicadores
+    }
+
+    // Função para voltar para o slide anterior
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Voltar para o slide anterior
+        updateSlide();  // Atualiza o carrossel e os indicadores
+    }
+
+    // Selecionar os botões para navegação
+    const nextButton = document.querySelector('#nextBtn');
+    const prevButton = document.querySelector('#prevBtn');
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Inicializar os indicadores
+    createBolinhas();
+});

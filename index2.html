@@ -9,19 +9,23 @@
     <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
 </head>
 <body>
-    <section id="home">
-        <header>
-            <h1 id="ltr"><a href="#home">UNIVERZ PORTAL</a></h1>
-            <nav>
-                <a href="#produtos">historias</a>
-                <a href="#jogos">Jogos</a>
-                <a href="#contato">contato</a>
-                <a href="#depoimentos">Depoimentos</a>
-            </nav>
-        </header>
-    </section>
+    <section id="home"></section>
+    <nav>
+        <h1 id="ltr"><a href="#home">UNIVERZ PORTAL</a></h1>
+
+        <div class="container-navegacao">
+            <ul>
+                <li><a href="#produtos">Historias</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#depoimentos" >Depoimentos</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-        <section id="promo">
+        <header id="promo">
+            <div class="bolinhas"></div>
             <div class="carrosel">
                 <div class="carrosel-itm">
                     <div class="fundo-bacana">
@@ -30,8 +34,14 @@
                             <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
                             <button type="submit">Ver mais</button>
                         </div>
+                        <div id="next-1">
+                            <button id="nextBtn">→</button>
+                        </div>
+                        <div id="prev-1">
+                            <button id="prevBtn">←</button>
+                        </div>
                         <div id="img-1">
-                            <img src="img/jogo-banner.png" alt="Void Promo">
+                            <img src="img/jogo-banner.png" alt="Promocional banner for Dimensional Fighterz">
                         </div>
                     </div>
                 </div>
@@ -43,12 +53,12 @@
                             <button type="submit">Ver mais</button>
                         </div>
                         <div id="img-2">
-                            <img src="img/jogo-capa.png" alt="Jogo Promo">
+                            <img src="img/jogo-capa.png" alt="VDZKJOWN Promo">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
         
         
         <section id="produtos">
@@ -57,17 +67,17 @@
                 <div class="produto">
                     <img src="img/capitulo-2.jpg" alt="Capítulo 2">
                     <p>CAPÍTULO 2</p>
-            <button type="submit">Ver mais</button>
+                    <button type="submit">Ver mais</button>
                 </div>
                 <div class="produto">
                     <img src="img/capitulo-1.jpg" alt="Capítulo 1">
                     <p>CAPÍTULO 1</p>
-            <button type="submit">Ver mais</button>
+                    <button type="submit">Ver mais</button>
                 </div>
                 <div class="produto">
                     <img src="img/capitulo-3.jpg" alt="Capítulo 3">
                     <p>CAPÍTULO 3</p>
-            <button type="submit">Ver mais</button>
+                    <button type="submit">Ver mais</button>
                 </div>
             </div>
         </section>
@@ -90,7 +100,7 @@
                     <h2>Fique Atualizado!</h2>
                     <input type="text" id="nome" name="nome" placeholder="Nome de usuário:" required>
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
-                    <input type="telefone" id="telefone" name="telefone" placeholder="telefone" required>
+                    <input type="tel" id="telefone" name="telefone" placeholder="telefone" required>
                     <button type="submit">enviar</button>
                 </form>
             </div>
@@ -138,4 +148,4 @@
     <script src="/js/script.js"></script>
 
 </body>
-</html
+</html>
