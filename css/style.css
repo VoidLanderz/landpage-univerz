@@ -9,11 +9,11 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg, #4c0080, #2a005a);
     color: white;
-    overflow-x: hidden; /* Previne rolagem horizontal indesejada */
+    overflow-x: hidden; /* esconde rolagem horizontal*/
 }
 
 body::-webkit-scrollbar {
-    width: 8px;  /* Largura da barra de rolagem */
+    width: 5px;  /* Largura da barra de rolagem */
 }
 
 body::-webkit-scrollbar-track {
@@ -22,12 +22,12 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #d7d7d7;  /* Cor do polegar da barra de rolagem */
-    border-radius: 10px;  /* Bordas arredondadas no polegar */
+    background: #333;  /* Cor do polegar (barrinha menor) da barra de rolagem */
+    border-radius: 10px;  /* Bordas arredondadas no polegar (barrinha menor) */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #8c00af;  /* Cor do polegar quando o mouse passa por cima */
+    background: #8c00af;  /* Cor do polegar (barrinha menor) quando o mouse passa por cima */
 }
 
 #ltr {
@@ -68,6 +68,7 @@ main {
 }
 
 #nextBtn, #prevBtn {
+    size: 100px;
     background-color: rgba(0, 0, 0, 0.1);
     color: white;
     z-index: 10000;      
@@ -76,12 +77,27 @@ main {
     cursor: pointer;
 }
 
-
-#prevBtn {
-    right: auto;  
-    left: 10px;  
+#nextBtn img, #prevBtn img {
+    width: 40px;
+    height: 40px;
 }
 
+#nextBtn {
+    position: absolute;
+    bottom: -210px;
+    right: 0px;
+}
+
+#prevBtn {
+    position: absolute;
+    bottom: -210px;
+    left: 0px;
+}
+
+.cta a {
+    text-decoration: none;
+    color: white;
+}
 
 button {
     margin-top: 10px;
@@ -107,12 +123,17 @@ button:active {
 
 /* Seções */
 section {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
     padding: 20px;
     margin: 20px auto;
     text-align: center;
 }
-
-/* Header */
+/* Header (nav) */
 nav {
     background-image: url("../img/UNIVERZ.png");
     background-size: contain;
@@ -209,6 +230,11 @@ h2 {
     font-size: 30px;
 }
 
+h3 {
+    font-size: 2.5em;
+    font-family: "Oswald", sans-serif;
+}
+
 /* Container promocional */
 .fundo-bacana {
     display: flex;
@@ -217,7 +243,9 @@ h2 {
     background-size:initial ;
     border-radius: 10px;
     padding: 2px;
+    padding-top: 100px;
     width: 130vw;
+    height: 70vh; /* tamanho vertical */
     margin-top: -430PX;
     margin-left: -40px;
     gap: 10px; 
@@ -225,8 +253,12 @@ h2 {
     padding-left: -40000px;
 }
 
+.maior {
+    font-size: 40px ;
+}
+
 #txt-1, #txt-2 {
-    padding-left: 150px;
+    padding-left: 200px;
     flex: 1;
     color: #ffffff; 
     text-align: left; 
@@ -238,7 +270,7 @@ h2 {
     height: auto;  
     border-radius: 10px;
     position: relative;
-    padding-right: 750px;
+    padding-right: 650px;
     padding-bottom: 2px;
     margin-top: -50px;
 }
@@ -246,8 +278,8 @@ h2 {
 .carrosel {
     position: relative;
     display: flex;
+    width: 120vw;
     transition: transform 0.5s ease;
-    width: 120vw; /* Assegura que o container não fique maior que a tela */
 }
 
 .carrosel-itm {
@@ -261,18 +293,20 @@ h2 {
 }
 
 .bolinhas {
+    position: absolute;
+    bottom: 250px;
+    left: 50%;
     display: flex;
     justify-content: center;
-    z-index: 10000;      
+    z-index: 100;      
     gap: 10px;
-    margin-top: 10px;
-
+    cursor: pointer;
 }
 
 .bolinha {
     width: 10px;
     height: 10px;
-    z-index: 10000;      
+    z-index: 100;      
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.6); /* Cor das bolinhas */
     transition: background-color 0.3s;
@@ -327,12 +361,19 @@ h2 {
 
 /* Jogos */
 
+.gradiente {
+
+}
+
 #jogos {
     background: linear-gradient(to bottom, #410073, #a600d6, #370068);
-    padding: 50px; 
-    width: 100vw;
-    margin-left: -50px;
+    padding: 50px;
+    width: 100%; /* Garantir que ocupe 100% da largura da tela */
+    height: 1000px ;
+    margin: 0 auto; /* Centraliza a seção */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
+
 
 .jogo img {
     scale: 0.90;
@@ -356,6 +397,7 @@ h2 {
 
 /* Formulário */
 .form-a {
+    margin-top: 200px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -456,8 +498,8 @@ footer {
 
 .card {
     background-color: #894AC5;
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;

@@ -9,9 +9,8 @@
     <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
 </head>
 <body>
-    <section id="home"></section>
     <nav>
-        <h1 id="ltr"><a href="#home">UNIVERZ PORTAL</a></h1>
+        <h1 id="ltr"><a href="#">UNIVERZ PORTAL</a></h1>
 
         <div class="container-navegacao">
             <ul>
@@ -30,15 +29,15 @@
                 <div class="carrosel-itm">
                     <div class="fundo-bacana">
                         <div id="txt-1">
-                            <h2 id="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
-                            <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
-                            <button type="submit">Ver mais</button>
+                            <h2 class="maior">LANÇAMENTO DE JOGO: DIMENSIONAL FIGHTERZ</h2>
+                            <p>Contate-nos para jogar a pré-venda e ganhar conteúdos exclusivos!</p>
+                            <button class="cta" type="submit"><a href="#contato">Fale conosco</a></button>
                         </div>
                         <div id="next-1">
-                            <button id="nextBtn">→</button>
+                            <button id="nextBtn"><img src="img/arrow_forward.png" alt="seta pra frente"></button>
                         </div>
                         <div id="prev-1">
-                            <button id="prevBtn">←</button>
+                            <button id="prevBtn"><img src="img/arrow_back.png" alt="seta pra trás"></button>
                         </div>
                         <div id="img-1">
                             <img src="img/jogo-banner.png" alt="Promocional banner for Dimensional Fighterz">
@@ -48,9 +47,9 @@
                 <div class="carrosel-itm">
                     <div class="fundo-bacana">
                         <div id="txt-2">
-                            <h2 id="maior">PEGUE SUA MIDIA FISICA ANTES QUE ESGOTE</h2>
-                            <p>Aproveite a pré-venda e ganhe conteúdos exclusivos!</p>
-                            <button type="submit">Ver mais</button>
+                            <h2 class="maior">GARANTA O SEU ANTES QUE ESGOTE</h2>
+                            <p>Contate-nos para não perder conteúdos exclusivos!</p>
+                            <button class="cta" type="submit"><a href="#contato">Fale conosco</a></button>
                         </div>
                         <div id="img-2">
                             <img src="img/jogo-capa.png" alt="VDZKJOWN Promo">
@@ -59,6 +58,8 @@
                 </div>
             </div>
         </header>
+    </main>
+    
         
         
         <section id="produtos">
@@ -67,29 +68,29 @@
                 <div class="produto">
                     <img src="img/capitulo-2.jpg" alt="Capítulo 2">
                     <p>CAPÍTULO 2</p>
-                    <button type="submit">Ver mais</button>
+                    <button type="submit" onclick="msg_vermais()">Ver mais</button>
                 </div>
                 <div class="produto">
                     <img src="img/capitulo-1.jpg" alt="Capítulo 1">
                     <p>CAPÍTULO 1</p>
-                    <button type="submit">Ver mais</button>
+                    <button type="submit" onclick="msg_vermais()">Ver mais</button>
                 </div>
                 <div class="produto">
                     <img src="img/capitulo-3.jpg" alt="Capítulo 3">
                     <p>CAPÍTULO 3</p>
-                    <button type="submit">Ver mais</button>
+                    <button type="submit" onclick="msg_vermais()">Ver mais</button>
                 </div>
             </div>
         </section>
         
         <section id="jogos">
             <div class="gradiente">
-                <h2>JOGOS</h2>
+                <h3>JOGOS</h3>
                 <div class="jogo">
                     <img src="img/UNIVERZ.png" alt="Void Battlez">
                     <h1>Dimensional fighterz</h1>
                     <p>(detalhes em breve)</p>
-                    <button type="submit">Ver mais</button>
+                    <button type="submit" onclick="msg_vermais()">Ver mais</button>
                 </div>
             </div>
         </section>
@@ -101,7 +102,7 @@
                     <input type="text" id="nome" name="nome" placeholder="Nome de usuário:" required>
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
                     <input type="tel" id="telefone" name="telefone" placeholder="telefone" required>
-                    <button type="submit">enviar</button>
+                    <button type="submit" onclick="msg_vermais()">enviar</button>
                 </form>
             </div>
         </section>
@@ -132,9 +133,9 @@
     <footer>
         <div class="footer-content">
             <div class="social">
-                <img src="img/Instagram.png" alt="Instagram">
-                <img src="img/Facebook.png" alt="Facebook">
-                <img src="img/LinkedIn.png" alt="LinkedIn">
+                <a href=""><img src="img/Instagram.png" alt="Instagram"></a>
+                <a href=""><img src="img/Facebook.png" alt="Facebook"></a>
+                <a href=""><img src="img/LinkedIn.png" alt="LinkedIn"></a>
             </div>
             <div class="footer-text">
                 <p>© Todos os direitos reservados Univerz</p>

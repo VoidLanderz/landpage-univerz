@@ -74,3 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar os indicadores
     createBolinhas();
 });
+
+function msg_vermais() {
+    alert("Pagina em construção!");
+}
