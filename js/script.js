@@ -1,6 +1,6 @@
 const nav = document.querySelector('nav');
 
-// treco pra deixar o nav maneiro 
+// Deixa o nav menor 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) { 
         // Adiciona a classe 'small' se o scroll for maior que 50px
@@ -10,7 +10,6 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('small');
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < totalItems; i++) {
             const bolinha = document.createElement('div');
             bolinha.classList.add('bolinha');
-            // Adicionar um evento de clique a cada bolinha
+            // Adiciona um evento de clique a cada bolinha
             bolinha.addEventListener('click', () => {
                 currentIndex = i;  // Atualiza o índice para o slide clicado
                 updateSlide();      // Atualiza o carrossel e os indicadores
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', nextSlide);
     prevButton.addEventListener('click', prevSlide);
 
-    // Inicializar os indicadores
+    // Inicializa os indicadores
     createBolinhas();
 });
 
